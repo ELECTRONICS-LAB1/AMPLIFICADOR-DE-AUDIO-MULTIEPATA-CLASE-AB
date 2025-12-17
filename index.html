@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Amplificador de Audio Multietapa Clase AB</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+    }
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #38bdf8;
+    }
+    .card {
+      background: #020617;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+    }
+    canvas {
+      background: white;
+      border-radius: 8px;
+      padding: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Amplificador de Audio Multietapa Clase AB</h1>
+  <p>Proyecto académico – Electrónica Analógica</p>
+</header>
+
+<section>
+  <div class="card">
+    <h2>Descripción del Proyecto</h2>
+    <p>
+      Este proyecto presenta el diseño y análisis de un amplificador de audio
+      multietapa clase AB, implementado con transistores BJT. El sistema permite
+      amplificar señales de baja amplitud provenientes de un micrófono o
+      dispositivo móvil.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Etapas del Amplificador</h2>
+    <ul>
+      <li><b>Etapa 1:</b> Pre-amplificación (emisor común)</li>
+      <li><b>Etapa 2:</b> Amplificación de voltaje</li>
+      <li><b>Etapa 3:</b> Etapa de potencia clase AB</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Ganancia por Etapa</h2>
+    <canvas id="grafica"></canvas>
+  </div>
+</section>
+
+<footer>
+  Estudiante de Electrónica y Automatización – ESPE
+</footer>
+
+<script>
+  const ctx = document.getElementById('grafica').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Pre-amplificación', 'Amplificación', 'Salida Clase AB'],
+      datasets: [{
+        label: 'Ganancia aproximada',
+        data: [10, 25, 1],
+        backgroundColor: ['#38bdf8', '#22c55e', '#facc15']
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: true }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
