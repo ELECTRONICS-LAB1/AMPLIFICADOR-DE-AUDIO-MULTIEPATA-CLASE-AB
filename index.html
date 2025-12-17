@@ -7,49 +7,72 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f8fb;
+            background-color: #e1f5fe;
             color: #0a1a2f;
-            line-height: 1.6;
         }
+
         header {
-            background-color: #0d47a1;
+            background: linear-gradient(90deg, #0d47a1, #1976d2);
             color: white;
             padding: 25px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
+
         main {
             max-width: 1000px;
             margin: auto;
             padding: 30px;
-            background-color: white;
         }
+
+        section {
+            background-color: white;
+            padding: 20px 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
         h2 {
             color: #0d47a1;
             border-bottom: 2px solid #90caf9;
             padding-bottom: 5px;
-            margin-top: 40px;
+            margin-bottom: 15px;
         }
+
         img {
             max-width: 100%;
             display: block;
             margin: 20px auto;
-            border: 2px solid #90caf9;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
-        ul {
-            margin-left: 20px;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
         }
+
+        th, td {
+            border: 1px solid #90caf9;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0d47a1;
+            color: white;
+        }
+
         footer {
             text-align: center;
-            padding: 15px;
-            background-color: #e3f2fd;
-            color: #555;
-            margin-top: 30px;
-        }
-        .section-box {
-            background-color: #e3f2fd;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-left: 5px solid #0d47a1;
+            padding: 20px;
+            background-color: #0288d1;
+            color: white;
+            margin-top: 40px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
     </style>
 </head>
@@ -62,62 +85,84 @@
 
 <main>
 
-    <h2>Descripción general</h2>
-    <div class="section-box">
-        <p>Amplificador de audio multietapa en configuración clase AB, diseñado para amplificar señales de baja amplitud con eficiencia moderada y baja distorsión. Ideal para aplicaciones en laboratorio o estudio de electrónica.</p>
-    </div>
+    <section>
+        <h2>Descripción general</h2>
+        <p>
+            Amplificador de audio multietapa en configuración clase AB. Ideal para amplificar señales
+            de baja amplitud provenientes de fuentes de audio. Ofrece buena eficiencia y baja distorsión.
+        </p>
+    </section>
 
-    <h2>Diagrama del circuito</h2>
-    <div class="section-box">
-        <p>Diagrama obtenido de referencia técnica:</p>
+    <section>
+        <h2>Diagrama del circuito</h2>
         <img src="amplificador_proteus.jpg" alt="Diagrama del amplificador multietapa">
-    </div>
+    </section>
 
-    <h2>Características técnicas</h2>
-    <div class="section-box">
-        <ul>
-            <li>Tipo de amplificador: Clase AB</li>
-            <li>Número de etapas: 3</li>
-            <li>Elementos activos: Transistores BJT</li>
-            <li>Configuración de salida: Push-Pull</li>
-            <li>Eficiencia aproximada: 50-70%</li>
-            <li>Aplicación: Amplificación de señales de audio de baja a media potencia</li>
-        </ul>
-    </div>
+    <section>
+        <h2>Especificaciones técnicas</h2>
+        <table>
+            <tr>
+                <th>Parámetro</th>
+                <th>Valor típico</th>
+                <th>Unidad</th>
+            </tr>
+            <tr>
+                <td>Tipo de amplificador</td>
+                <td>Clase AB</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Número de etapas</td>
+                <td>3</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Transistores activos</td>
+                <td>BJT (NPN/PNP)</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Ganancia típica</td>
+                <td>30</td>
+                <td>dB</td>
+            </tr>
+            <tr>
+                <td>Impedancia de entrada</td>
+                <td>10 kΩ</td>
+                <td>Ω</td>
+            </tr>
+            <tr>
+                <td>Impedancia de salida</td>
+                <td>8 Ω</td>
+                <td>Ω</td>
+            </tr>
+            <tr>
+                <td>Voltaje de alimentación</td>
+                <td>12</td>
+                <td>V</td>
+            </tr>
+            <tr>
+                <td>Corriente de reposo</td>
+                <td>50</td>
+                <td>mA</td>
+            </tr>
+        </table>
+    </section>
 
-    <h2>Funcionamiento por etapas</h2>
-    <div class="section-box">
-        <p>El circuito se compone de:</p>
-        <ul>
-            <li><strong>Primera etapa:</strong> amplificación de señal pequeña (pre-amplificación)</li>
-            <li><strong>Segunda etapa:</strong> amplificación de tensión y corriente</li>
-            <li><strong>Tercera etapa:</strong> etapa de salida push-pull para mayor potencia y eficiencia</li>
-        </ul>
-    </div>
-
-    <h2>Aplicaciones</h2>
-    <div class="section-box">
-        <ul>
-            <li>Laboratorios de electrónica educativa</li>
-            <li>Estudios de audio</li>
-            <li>Proyectos de amplificación de señales de baja potencia</li>
-        </ul>
-    </div>
-
-    <h2>Descargas</h2>
-    <div class="section-box">
-        <ul>
-            <li><a href="amplificador_proteus.jpg" download>Descargar diagrama del amplificador (Proteus)</a></li>
-        </ul>
-    </div>
+    <section>
+        <h2>Observaciones</h2>
+        <p>
+            Este amplificador es común en aplicaciones de audio y prácticas de laboratorio.
+            Su topología clase AB proporciona un equilibrio entre eficiencia y fidelidad de la señal.
+        </p>
+    </section>
 
 </main>
 
 <footer>
-    <p>Banco de Circuitos Electrónicos – GitHub Pages</p>
+    <p>Laboratorio de Electrónica – GitHub Pages</p>
 </footer>
 
 </body>
 </html>
-
 
