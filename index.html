@@ -1,82 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Amplificador Clase AB</title>
+    <meta charset="UTF-8">
+    <title>Amplificador de Audio Multietapa Clase AB</title>
 
-<style>
-body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(180deg, #ffffff, #e0f2ff);
-    color:#0d47a1;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f8fb;
+            color: #0a1a2f;
+        }
 
-header{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background: radial-gradient(circle, #bbdefb, #ffffff);
-    overflow:hidden;
-}
+        header {
+            background-color: #0d47a1;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
 
-h1{
-    font-size:3em;
-    margin:0;
-    animation: slideDown 1.5s ease;
-}
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+        }
 
-#typed{
-    font-size:1.2em;
-    margin-top:15px;
-    border-right:3px solid #1976d2;
-    white-space:nowrap;
-    overflow:hidden;
-}
+        h2 {
+            color: #0d47a1;
+            border-bottom: 2px solid #90caf9;
+            padding-bottom: 5px;
+        }
 
-@keyframes slideDown{
-    from{ transform:translateY(-50px); opacity:0; }
-    to{ transform:translateY(0); opacity:1; }
-}
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #90caf9;
+        }
 
-section{
-    padding:60px;
-    max-width:900px;
-    margin:auto;
-}
-</style>
+        ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #e3f2fd;
+            color: #555;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Amplificador de Audio Clase AB</h1>
-    <div id="typed"></div>
+    <h1>Amplificador de Audio Multietapa Clase AB</h1>
+    <p>Banco de circuitos electrónicos</p>
 </header>
 
-<section>
-    <h2>Proyecto de Electrónica</h2>
+<main>
+
+    <h2>Descripción general</h2>
     <p>
-        Diseño y simulación de un amplificador multietapa utilizando transistores bipolares.
+        Este circuito corresponde a un amplificador de audio multietapa en configuración
+        clase AB, diseñado para amplificar señales de baja amplitud provenientes de una
+        fuente de audio, manteniendo una adecuada eficiencia y baja distorsión.
     </p>
-</section>
 
-<script>
-const texto = "Diseño • Simulación • Electrónica de Potencia";
-let i = 0;
+    <h2>Diagrama del circuito</h2>
+    <p>
+        El siguiente diagrama fue realizado y simulado en el software Proteus.
+    </p>
 
-function escribir(){
-    if(i < texto.length){
-        document.getElementById("typed").innerHTML += texto.charAt(i);
-        i++;
-        setTimeout(escribir, 80);
-    }
-}
+    <img src="amplificador_proteus.png" alt="Diagrama del amplificador multietapa">
 
-escribir();
-</script>
+    <h2>Características técnicas</h2>
+    <ul>
+        <li>Tipo de amplificador: Clase AB</li>
+        <li>Número de etapas: 3</li>
+        <li>Elementos activos: Transistores BJT</li>
+        <li>Aplicación: Amplificación de señales de audio</li>
+    </ul>
+
+    <h2>Observaciones</h2>
+    <p>
+        El diseño permite una amplificación estable y es adecuado para aplicaciones
+        académicas y de laboratorio en cursos de electrónica.
+    </p>
+
+</main>
+
+<footer>
+    <p>Laboratorio de Electrónica – GitHub Pages</p>
+</footer>
 
 </body>
 </html>
