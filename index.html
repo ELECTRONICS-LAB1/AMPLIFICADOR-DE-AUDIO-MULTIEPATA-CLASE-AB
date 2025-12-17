@@ -3,46 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Amplificador de Audio Multietapa Clase AB</title>
-
     <style>
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f4f8fb;
             color: #0a1a2f;
+            line-height: 1.6;
         }
-
         header {
             background-color: #0d47a1;
             color: white;
             padding: 25px;
             text-align: center;
         }
-
         main {
             max-width: 1000px;
             margin: auto;
             padding: 30px;
             background-color: white;
         }
-
         h2 {
             color: #0d47a1;
             border-bottom: 2px solid #90caf9;
             padding-bottom: 5px;
+            margin-top: 40px;
         }
-
         img {
             max-width: 100%;
             display: block;
             margin: 20px auto;
             border: 2px solid #90caf9;
         }
-
         ul {
             margin-left: 20px;
         }
-
         footer {
             text-align: center;
             padding: 15px;
@@ -50,9 +45,14 @@
             color: #555;
             margin-top: 30px;
         }
+        .section-box {
+            background-color: #e3f2fd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0d47a1;
+        }
     </style>
 </head>
-
 <body>
 
 <header>
@@ -63,38 +63,58 @@
 <main>
 
     <h2>Descripción general</h2>
-    <p>
-        Este circuito corresponde a un amplificador de audio multietapa en configuración
-        clase AB, diseñado para amplificar señales de baja amplitud provenientes de una
-        fuente de audio, manteniendo una adecuada eficiencia y baja distorsión.
-    </p>
+    <div class="section-box">
+        <p>Amplificador de audio multietapa en configuración clase AB, diseñado para amplificar señales de baja amplitud con eficiencia moderada y baja distorsión. Ideal para aplicaciones en laboratorio o estudio de electrónica.</p>
+    </div>
 
     <h2>Diagrama del circuito</h2>
-    <p>
-        El siguiente diagrama fue realizado y simulado en el software Proteus.
-    </p>
-
-    <img src="amplificador_proteus.jpg" alt="Diagrama del amplificador multietapa">
-
+    <div class="section-box">
+        <p>Diagrama obtenido de referencia técnica:</p>
+        <img src="amplificador_proteus.jpg" alt="Diagrama del amplificador multietapa">
+    </div>
 
     <h2>Características técnicas</h2>
-    <ul>
-        <li>Tipo de amplificador: Clase AB</li>
-        <li>Número de etapas: 3</li>
-        <li>Elementos activos: Transistores BJT</li>
-        <li>Aplicación: Amplificación de señales de audio</li>
-    </ul>
+    <div class="section-box">
+        <ul>
+            <li>Tipo de amplificador: Clase AB</li>
+            <li>Número de etapas: 3</li>
+            <li>Elementos activos: Transistores BJT</li>
+            <li>Configuración de salida: Push-Pull</li>
+            <li>Eficiencia aproximada: 50-70%</li>
+            <li>Aplicación: Amplificación de señales de audio de baja a media potencia</li>
+        </ul>
+    </div>
 
-    <h2>Observaciones</h2>
-    <p>
-        El diseño permite una amplificación estable y es adecuado para aplicaciones
-        académicas y de laboratorio en cursos de electrónica.
-    </p>
+    <h2>Funcionamiento por etapas</h2>
+    <div class="section-box">
+        <p>El circuito se compone de:</p>
+        <ul>
+            <li><strong>Primera etapa:</strong> amplificación de señal pequeña (pre-amplificación)</li>
+            <li><strong>Segunda etapa:</strong> amplificación de tensión y corriente</li>
+            <li><strong>Tercera etapa:</strong> etapa de salida push-pull para mayor potencia y eficiencia</li>
+        </ul>
+    </div>
+
+    <h2>Aplicaciones</h2>
+    <div class="section-box">
+        <ul>
+            <li>Laboratorios de electrónica educativa</li>
+            <li>Estudios de audio</li>
+            <li>Proyectos de amplificación de señales de baja potencia</li>
+        </ul>
+    </div>
+
+    <h2>Descargas</h2>
+    <div class="section-box">
+        <ul>
+            <li><a href="amplificador_proteus.jpg" download>Descargar diagrama del amplificador (Proteus)</a></li>
+        </ul>
+    </div>
 
 </main>
 
 <footer>
-    <p>Laboratorio de Electrónica – GitHub Pages</p>
+    <p>Banco de Circuitos Electrónicos – GitHub Pages</p>
 </footer>
 
 </body>
